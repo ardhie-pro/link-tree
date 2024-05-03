@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"
+    />
+    <title>Agroxa - Responsive Bootstrap 4 Admin Dashboard</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <link rel="stylesheet" href="../plugins/morris/morris.css" />
+
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/metismenu.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Begin page -->
+    <div id="wrapper">
+      <!-- Top Bar Start -->
+      <div class="topbar">
+        <!-- LOGO -->
+        <div class="topbar-left topbar-left-dar bg-dark">
+          <a href="index.html" class="logo">
+            <span>
+              <img src="" alt="" height="24" />
+            </span>
+            <i>
+              <img src="" alt="" height="22" />
+            </i>
+          </a>
+        </div>
+
+        <nav class="navbar-custom bg-dark">
+          <ul class="navbar-right d-flex list-inline float-right mb-0">
+            <li class="dropdown notification-list d-none d-sm-block">
+              <form role="search" class="app-search">
+                <div class="form-group mb-0">
+                  <input
+                    type="text"
+                    class="form-control bg-dark"
+                    placeholder="Search.."
+                  />
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </form>
+            </li>
+
+            <li class="dropdown notification-list">
+              <a
+                class="nav-link dropdown-toggle arrow-none waves-effect waves-light"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <i class="mdi mdi-bell noti-icon"></i>
+                <span class="badge badge-pill badge-info noti-icon-badge"
+                  >3</span
+                >
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                <!-- item-->
+                <h6 class="dropdown-item-text">Notifications (37)</h6>
+                <div class="slimscroll notification-item-list">
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item active"
+                  >
+                    <div class="notify-icon bg-success">
+                      <i class="mdi mdi-cart-outline"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your order is placed<span class="text-muted"
+                        >Dummy text of the printing and typesetting
+                        industry.</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-warning">
+                      <i class="mdi mdi-message"></i>
+                    </div>
+                    <p class="notify-details">
+                      New Message received<span class="text-muted"
+                        >You have 87 unread messages</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-info">
+                      <i class="mdi mdi-flag"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your item is shipped<span class="text-muted"
+                        >It is a long established fact that a reader will</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-primary">
+                      <i class="mdi mdi-cart-outline"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your order is placed<span class="text-muted"
+                        >Dummy text of the printing and typesetting
+                        industry.</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-danger">
+                      <i class="mdi mdi-message"></i>
+                    </div>
+                    <p class="notify-details">
+                      New Message received<span class="text-muted"
+                        >You have 87 unread messages</span
+                      >
+                    </p>
+                  </a>
+                </div>
+                <!-- All-->
+                <a
+                  href="javascript:void(0);"
+                  class="dropdown-item text-center text-primary"
+                >
+                  View all <i class="fi-arrow-right"></i>
+                </a>
+              </div>
+            </li>
+            <li class="dropdown notification-list">
+              <div class="dropdown notification-list nav-pro-img">
+                <a
+                  class="dropdown-toggle nav-link arrow-none waves-effect nav-user waves-light"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="false"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/users/user-4.jpg"
+                    alt="user"
+                    class="rounded-circle"
+                  />
+                </a>
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                  <!-- item-->
+                  <a class="dropdown-item" href="#"
+                    ><i class="mdi mdi-account-circle m-r-5"></i> Profile</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="mdi mdi-wallet m-r-5"></i> My Wallet</a
+                  >
+                  <a class="dropdown-item d-block" href="#"
+                    ><span class="badge badge-success float-right">11</span
+                    ><i class="mdi mdi-settings m-r-5"></i> Settings</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="mdi mdi-lock-open-outline m-r-5"></i> Lock
+                    screen</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#"
+                    ><i class="mdi mdi-power text-danger"></i> Logout</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="list-inline menu-left mb-0">
+            <li class="float-left">
+              <button
+                class="button-menu-mobile open-left waves-effect waves-light bg-dark"
+              >
+                <i class="mdi mdi-menu"></i>
+              </button>
+            </li>
+            <li class="d-none d-sm-block">
+              <div class="dropdown pt-3 d-inline-block">
+                <a
+                  class="btn btn-header waves-effect waves-light dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Create New
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Top Bar End -->
+
+      <!-- ========== Left Sidebar Start ========== -->
+      <div class="left side-menu side-menu-dark">
+        <div class="slimscroll-menu" id="remove-scroll">
+          <!--- Sidemenu -->
+          <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu" id="side-menu">
+              <li class="menu-title">Menu</li>
+              <li>
+                <a href="index.html" class="waves-effect">
+                  <i class="mdi mdi-home"></i
+                  ><span class="badge badge-primary float-right">3</span>
+                  <span> Dashboard </span>
+                </a>
+              </li>
+
+              <li>
+                <a href="javascript:void(0);" class="waves-effect"
+                  ><i class="mdi mdi-email"></i
+                  ><span>
+                    Email
+                    <span class="float-right menu-arrow"
+                      ><i class="mdi mdi-plus"></i
+                    ></span> </span
+                ></a>
+                <ul class="submenu">
+                  <li><a href="email-inbox.html">Inbox</a></li>
+                  <li><a href="email-read.html">Email Read</a></li>
+                  <li><a href="email-compose.html">Email Compose</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- Sidebar -->
+          <div class="clearfix"></div>
+        </div>
+        <!-- Sidebar -left -->
+      </div>
+      <!-- Left Sidebar End -->
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="page-title-box page-title-box-dark">
+                  <h4 class="page-title">Selamat Datang</h4>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+
+            <div class="page-content-wrapper">
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="mt-0 header-title mb-4">Latest Trasaction</h4>
+                      <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col">(#) Id</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Date</th>
+                              <th scope="col">Amount</th>
+                              <th scope="col" colspan="2">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">#15236</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-2.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Jeanette James
+                                </div>
+                              </td>
+                              <td>14/8/2018</td>
+                              <td>$104</td>
+                              <td>
+                                <span class="badge badge-success"
+                                  >Delivered</span
+                                >
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">#15237</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-3.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Christopher Taylor
+                                </div>
+                              </td>
+                              <td>15/8/2018</td>
+                              <td>$112</td>
+                              <td>
+                                <span class="badge badge-warning">Pending</span>
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">#15238</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-4.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Edward Vazquez
+                                </div>
+                              </td>
+                              <td>15/8/2018</td>
+                              <td>$116</td>
+                              <td>
+                                <span class="badge badge-success"
+                                  >Delivered</span
+                                >
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">#15239</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-5.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Michael Flannery
+                                </div>
+                              </td>
+                              <td>16/8/2018</td>
+                              <td>$109</td>
+                              <td>
+                                <span class="badge badge-primary">Cancel</span>
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">#15240</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-6.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Jamie Fishbourne
+                                </div>
+                              </td>
+                              <td>17/8/2018</td>
+                              <td>$120</td>
+                              <td>
+                                <span class="badge badge-success"
+                                  >Delivered</span
+                                >
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="mt-0 header-title mb-4">Latest Order</h4>
+                      <div class="table-responsive order-table">
+                        <table class="table table-hover mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col">(#) Id</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Date/Time</th>
+                              <th scope="col">Amount</th>
+                              <th scope="col" colspan="2">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">#14562</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-4.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Matthew Drapeau
+                                </div>
+                              </td>
+                              <td>
+                                17/8/2018
+                                <p class="font-13 text-muted mb-0">8:26AM</p>
+                              </td>
+                              <td>$104</td>
+                              <td>
+                                <span class="badge badge-success badge-pill"
+                                  ><i
+                                    class="mdi mdi-checkbox-blank-circle text-success"
+                                  ></i>
+                                  Delivered</span
+                                >
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">#14563</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-5.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Ralph Shockey
+                                </div>
+                              </td>
+                              <td>
+                                18/8/2018
+                                <p class="font-13 text-muted mb-0">10:18AM</p>
+                              </td>
+                              <td>$112</td>
+                              <td>
+                                <span class="badge badge-warning badge-pill"
+                                  ><i
+                                    class="mdi mdi-checkbox-blank-circle text-warning"
+                                  ></i>
+                                  Pending</span
+                                >
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">#14564</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-6.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Alexander Pierson
+                                </div>
+                              </td>
+                              <td>
+                                18//8/2018
+                                <p class="font-13 text-muted mb-0">12:36PM</p>
+                              </td>
+                              <td>$116</td>
+                              <td>
+                                <span class="badge badge-success badge-pill"
+                                  ><i
+                                    class="mdi mdi-checkbox-blank-circle text-success"
+                                  ></i>
+                                  Delivered</span
+                                >
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">#14565</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-7.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Robert Rankin
+                                </div>
+                              </td>
+                              <td>
+                                19/8/2018
+                                <p class="font-13 text-muted mb-0">11:47AM</p>
+                              </td>
+                              <td>$109</td>
+                              <td>
+                                <span class="badge badge-primary badge-pill"
+                                  ><i
+                                    class="mdi mdi-checkbox-blank-circle text-primary"
+                                  ></i>
+                                  Cancel</span
+                                >
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">#14566</th>
+                              <td>
+                                <div>
+                                  <img
+                                    src="assets/images/users/user-8.jpg"
+                                    alt=""
+                                    class="thumb-md rounded-circle mr-2"
+                                  />
+                                  Myrna Shields
+                                </div>
+                              </td>
+                              <td>
+                                20/8/2018
+                                <p class="font-13 text-muted mb-0">02:52PM</p>
+                              </td>
+                              <td>$120</td>
+                              <td>
+                                <span class="badge badge-success badge-pill"
+                                  ><i
+                                    class="mdi mdi-checkbox-blank-circle text-success"
+                                  ></i>
+                                  Delivered</span
+                                >
+                              </td>
+                              <td>
+                                <div>
+                                  <a href="#" class="btn btn-primary btn-sm"
+                                    >Edit</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end row -->
+            </div>
+            <!-- end page content-->
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- content -->
+
+        <footer class="footer">
+          © 2018 Agroxa
+          <span class="d-none d-sm-inline-block"
+            >- Crafted with <i class="mdi mdi-heart text-danger"></i> by
+            Themesbrand.</span
+          >
+        </footer>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- End Right content here -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- END wrapper -->
+
+    <!-- jQuery  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/waves.min.js"></script>
+
+    <script src="../plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Peity JS -->
+    <script src="../plugins/peity/jquery.peity.min.js"></script>
+
+    <script src="../plugins/morris/morris.min.js"></script>
+    <script src="../plugins/raphael/raphael-min.js"></script>
+
+    <script src="assets/pages/dashboard.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
