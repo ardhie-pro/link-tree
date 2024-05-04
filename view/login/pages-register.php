@@ -44,12 +44,12 @@ if(isset($_POST['register'])){
         <title>Agroxa - Responsive Bootstrap 4 Admin Dashboard</title>
         <meta content="Admin Dashboard" name="description" />
         <meta content="Themesbrand" name="author" />
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
 
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/icons.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
@@ -63,7 +63,7 @@ if(isset($_POST['register'])){
                 <div class="card-body">
 
                     <h3 class="text-center m-0">
-                        <a href="index.html" class="logo logo-admin"><img src="../assets/images/logo.png" height="30" alt="logo"></a>
+                        <a href="index.html" class="logo logo-admin"><img src="../../assets/images/logo.png" height="30" alt="logo"></a>
                     </h3>
 
                     <div class="p-3">
@@ -118,16 +118,16 @@ if(isset($_POST['register'])){
             
 
         <!-- jQuery  -->
-        <script src="../assets/js/jquery.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/js/metisMenu.min.js"></script>
-        <script src="../assets/js/jquery.slimscroll.js"></script>
-        <script src="../assets/js/waves.min.js"></script>
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/metisMenu.min.js"></script>
+        <script src="../../assets/js/jquery.slimscroll.js"></script>
+        <script src="../../assets/js/waves.min.js"></script>
 
-        <script src="../plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+        <script src="../../assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
 
         <!-- App js -->
-        <script src="../assets/js/app.js"></script>
+        <script src="../../assets/js/app.js"></script>
 
     </body>
 

@@ -43,7 +43,7 @@ if(isset($_POST['register'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register Pesbuk</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
 </head>
 <body class="bg-light">
 
