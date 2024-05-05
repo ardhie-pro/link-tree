@@ -28,7 +28,7 @@ if(isset($_POST['login'])){
             session_start();
             $_SESSION["user"] = $user;
             // login sukses, alihkan ke halaman timeline
-            header("Location: timeline.php");
+            header("Location: ../admin/dashboard.php");
         }
     }
 }
@@ -83,14 +83,9 @@ if(isset($_POST['login'])){
                             </div>
 
                             <div class="form-group row m-t-20">
-                                <div class="col-6">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                        <label class="custom-control-label" for="customControlInline">Remember me</label>
-                                    </div>
-                                </div>
+                               
                                 <div class="col-6 text-right">
-                                    <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Log In</button>
+                                <input type="submit" class="btn btn-primary w-md waves-effect waves-light" name="login" value="Masuk" />
                                 </div>
                             </div>
 
