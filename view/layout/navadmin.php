@@ -5,10 +5,10 @@
                 <div class="topbar-left">
                     <a href="index.html" class="logo">
                         <span>
-                            <img src="../../assets/images/logo.png" alt="" height="24">
+                            <img src="../../assets/img/incm.png" alt="" height="60">
                         </span>
                         <i>
-                            <img src="../../assets/images/logo-sm.png" alt="" height="22">
+                            <img src="../../assets/img/incm.png" alt="" height="45">
                         </i>
                     </a>
                 </div>
@@ -33,23 +33,23 @@
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
                                 <!-- item-->
                                 <h6 class="dropdown-item-text">
-                                    Notifications (37)
+                                    Notifications (3)
                                 </h6>
                                 <div class="slimscroll notification-item-list">
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                                        <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                                        <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+                                        <div class="notify-icon bg-success"><img class="notify-icon bg-success" src="../../assets/img/29.png" alt=""></div>
+                                        <p class="notify-details">Yuk Sholat<span class="text-muted">sholat sebelum di sholatkan.</span></p>
                                     </a>
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
-                                        <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span></p>
+                                        <div class="notify-icon bg-warning"><img class="notify-icon bg-warning" src="../../assets/img/28.png" alt=""></i></div>
+                                        <p class="notify-details">Sudahkah Anda Bersyukur?<span class="text-muted">فَاذْكُرُوْنِيْٓ اَذْكُرْكُمْ وَاشْكُرُوْا لِيْ وَلَا تَكْفُرُوْنِ</span></p>
                                     </a>
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <div class="notify-icon bg-info"><i class="mdi mdi-flag"></i></div>
-                                        <p class="notify-details">Your item is shipped<span class="text-muted">It is a long established fact that a reader will</span></p>
+                                        <div class="notify-icon bg-info"><img class="notify-icon bg-info" src="../../assets/img/30.png" alt=""></div>
+                                        <p class="notify-details">Bacalah Al-Quran<span class="text-muted">Walaupun satu ayat dalam sehari.</span></p>
                                     </a>
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
@@ -76,9 +76,6 @@
                                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                     <!-- item-->
                                     <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5"></i> Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5"></i> My Wallet</a>
-                                    <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings m-r-5"></i> Settings</a>
-                                    <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline m-r-5"></i> Lock screen</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
                                 </div>                                                                    
@@ -148,7 +145,14 @@
 
 
                             <li class="menu-title">Extras</li>
-
+                            
+                            <li>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-google-pages"></i><span> Pages <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
+                                <ul class="submenu">
+                                    <li><a href="pages-login.html">Login</a></li>
+                                    <li><a href="pages-register.html">Register</a></li>
+                                </ul>
+                            </li>
                         </ul>
 
                     </div>

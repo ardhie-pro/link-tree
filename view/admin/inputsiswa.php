@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Agroxa - Responsive Bootstrap 4 Admin Dashboard</title>
+        <title>Admin - Input Siswa</title>
         <?php require("../layout/headadmin.php");?>
     </head>
 
@@ -24,10 +24,10 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="page-title-box">
-                  <h4 class="page-title">Data Table</h4>
+                  <h4 class="page-title">Data Siswa</h4>
                   <ol class="breadcrumb">
-                     <div class="text-center">
-                         <!-- Small modal -->
+                    <div class="text-center">
+                            <!-- Small modal -->
                             <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center">Center modal</button>
                     </div>
                   </ol>
@@ -82,6 +82,7 @@
 
                         <tbody>
                           <tr>
+<<<<<<< HEAD
                             <td>Jonas Alexander</td>
                             <td>Developer</td>
                             <td>San Francisco</td>
@@ -142,6 +143,46 @@
                                                             </div><!-- /.modal-content -->
                                                         </div><!-- /.modal-dialog -->
                                                     </div><!-- /.modal -->
+=======
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                      <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title mt-0">Center modal</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+>>>>>>> 0f741c2e11fd9baf0d636e64969c525a3b63f44e
                     </div>
                   </div>
                 </div>
