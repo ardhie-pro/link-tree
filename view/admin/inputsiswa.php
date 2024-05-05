@@ -82,7 +82,6 @@
 
                         <tbody>
                           <tr>
-<<<<<<< HEAD
                             <td>Jonas Alexander</td>
                             <td>Developer</td>
                             <td>San Francisco</td>
@@ -124,7 +123,7 @@
                                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <form action="../login/mesin/pinputsiswa.php" method="POST">
+                                                                    <form action="../mesin/inputsiswa.php" method="POST">
                                                                         <div class="mb-3">
                                                                             <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
                                                                             <input type="text" class="form-control" 
@@ -136,53 +135,13 @@
                                                                             <input type="text" 
                                                                             name="kelas" class="form-control" id="exampleInputPassword1">
                                                                         </div>
-                                                                       
+                                                                      
                                                                         <input type="submit" value="Masukan" name="inputsiswa" class="btn btn-primary"></input>
                                                                     </form>
                                                                 </div>
                                                             </div><!-- /.modal-content -->
                                                         </div><!-- /.modal-dialog -->
                                                     </div><!-- /.modal -->
-=======
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
-                          </tr>
-                          
-                        </tbody>
-                      </table>
-                      <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title mt-0">Center modal</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
-                                            </div>
-                                            <div class="mb-3 form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </form>
-                                    </div>
-                                </div><!-- /.modal-content -->
-                            </div><!-- /.modal-dialog -->
-                        </div><!-- /.modal -->
->>>>>>> 0f741c2e11fd9baf0d636e64969c525a3b63f44e
                     </div>
                   </div>
                 </div>

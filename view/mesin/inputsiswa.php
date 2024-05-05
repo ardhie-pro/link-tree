@@ -1,6 +1,6 @@
 <?php
 
-include("../config1.php");
+include("config1.php");
 
 // cek apakah tombol daftar sudah diklik atau blum?
 if(isset($_POST['inputsiswa'])){
