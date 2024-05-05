@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 require_once("config.php");
 
 if(isset($_POST['login'])){
@@ -25,7 +25,6 @@ if(isset($_POST['login'])){
         // verifikasi password
         if(password_verify($password, $user["password"])){
             // buat Session
-            session_start();
             $_SESSION["user"] = $user;
             // login sukses, alihkan ke halaman timeline
             header("Location: ../admin/dashboard.php");
@@ -34,6 +33,11 @@ if(isset($_POST['login'])){
 }
 ?>
 
+<?php
+if( isset($_SESSION["user"])){
+    header("Location: ../admin/dashboard.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,16 +78,15 @@ if(isset($_POST['login'])){
 
                             <div class="form-group">
                                 <label for="username">Username</label>
-                               <input class="form-control" type="text" name="username" placeholder="Username atau email" />
+                                <input class="form-control" type="text" name="username" placeholder="Username atau email" />
                             </div>
 
                             <div class="form-group">
                                 <label for="userpassword">Password</label>
-                                   <input class="form-control" type="password" name="password" placeholder="Password" />
+                                <input class="form-control" type="password" name="password" placeholder="Password" />
                             </div>
 
                             <div class="form-group row m-t-20">
-                               
                                 <div class="col-6 text-right">
                                 <input type="submit" class="btn btn-primary w-md waves-effect waves-light" name="login" value="Masuk" />
                                 </div>

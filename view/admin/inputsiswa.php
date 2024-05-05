@@ -79,69 +79,57 @@
                             <th>Salary</th>
                           </tr>
                         </thead>
-
+                        
                         <tbody>
-                          <tr>
-                            <td>Jonas Alexander</td>
-                            <td>Developer</td>
-                            <td>San Francisco</td>
-                            <td>30</td>
-                            <td>2010/07/14</td>
-                            <td>$86,500</td>
-                          </tr>
-                          <tr>
-                            <td>Shad Decker</td>
-                            <td>Regional Director</td>
-                            <td>Edinburgh</td>
-                            <td>51</td>
-                            <td>2008/11/13</td>
-                            <td>$183,000</td>
-                          </tr>
-                          <tr>
-                            <td>Michael Bruce</td>
-                            <td>Javascript Developer</td>
-                            <td>Singapore</td>
-                            <td>29</td>
-                            <td>2011/06/27</td>
-                            <td>$183,000</td>
-                          </tr>
-                          <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>New York</td>
-                            <td>27</td>
-                            <td>2011/01/25</td>
-                            <td>$112,000</td>
-                          </tr>
+                        <?php
+                          $sql = "SELECT * FROM siswa";
+                          $query = mysqli_query($db, $sql);
+                          
+                          while($siswa = mysqli_fetch_array($query)){
+                          ?>
+
+                            <tr>
+                            
+                            <td><?php echo $siswa['id']; ?></td>
+                            <td><?php echo $siswa['nama']; ?></td>
+                            <td><?php echo $siswa['kelas']; ?></td>
+                            <td>
+                            <a href="form-edit.php?id='.$siswa['id'].'">Edit</a>
+                            <a href="hapus.php?id='.$siswa['id'].'">Hapus</a>
+                            </td>
+                            
+                            </tr>
+                            <?php }		
+                          ?>
                         </tbody>
                       </table>
                       <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title mt-0">Center modal</h5>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <form action="../mesin/inputsiswa.php" method="POST">
-                                                                        <div class="mb-3">
-                                                                            <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
-                                                                            <input type="text" class="form-control" 
-                                                                            name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                                            <div id="emailHelp" class="form-text">Masukan Nama Siswa</div>
-                                                                        </div>
-                                                                        <div class="mb-3">
-                                                                            <label for="exampleInputPassword1" class="form-label">Kelas</label>
-                                                                            <input type="text" 
-                                                                            name="kelas" class="form-control" id="exampleInputPassword1">
-                                                                        </div>
-                                                                      
-                                                                        <input type="submit" value="Masukan" name="inputsiswa" class="btn btn-primary"></input>
-                                                                    </form>
-                                                                </div>
-                                                            </div><!-- /.modal-content -->
-                                                        </div><!-- /.modal-dialog -->
-                                                    </div><!-- /.modal -->
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title mt-0">Center modal</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="../mesin/inputsiswa.php" method="POST">
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
+                                                <input type="text" class="form-control" 
+                                                name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <div id="emailHelp" class="form-text">Masukan Nama Siswa</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Kelas</label>
+                                                <input type="text" 
+                                                name="kelas" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                          
+                                            <input type="submit" value="Masukan" name="inputsiswa" class="btn btn-primary"></input>
+                                        </form>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
                     </div>
                   </div>
                 </div>

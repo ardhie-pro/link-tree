@@ -77,11 +77,10 @@
                                     <!-- item-->
                                     <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5"></i> Profile</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                                    <a class="dropdown-item text-danger" href="../login/logout.php"><i class="mdi mdi-power text-danger"></i> Logout</a>
                                 </div>                                                                    
                             </div>
                         </li>
-
                     </ul>
 
                     <ul class="list-inline menu-left mb-0">
@@ -130,12 +129,8 @@
                             <li>
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-clipboard"></i><span> Forms <span class="badge badge-success float-right">6</span> </span></a>
                                 <ul class="submenu">
-                                    <li><a href="form-elements.html">Form Elements</a></li>
+                                    <li><a href="inputsiswa.php">Form Siswa</a></li>
                                     <li><a href="form-validation.html">Form Validation</a></li>
-                                    <li><a href="form-advanced.html">Form Advanced</a></li>
-                                    <li><a href="form-editors.html">Form Editors</a></li>
-                                    <li><a href="form-uploads.html">Form File Upload</a></li>
-                                    <li><a href="form-xeditable.html">Form Xeditable</a></li>
                                 </ul>
                             </li>
 
@@ -145,7 +140,7 @@
 
 
                             <li class="menu-title">Extras</li>
-                            
+
                             <li>
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-google-pages"></i><span> Pages <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
                                 <ul class="submenu">
