@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Dashboard | Kesiswaan</title>
+        <title>Agroxa - Responsive Bootstrap 4 Admin Dashboard</title>
         <?php require("../layout/headadmin.php");?>
     </head>
 
