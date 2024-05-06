@@ -130,7 +130,7 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-clipboard"></i><span> Forms <span class="badge badge-success float-right">6</span> </span></a>
                                 <ul class="submenu">
                                     <li><a href="inputsiswa.php">Form Siswa</a></li>
-                                    <li><a href="form-validation.html">Form Validation</a></li>
+                                    <li><a href="inputtanggal.php">Form Tanggal</a></li>
                                 </ul>
                             </li>
 

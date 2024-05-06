@@ -5,13 +5,33 @@ if( !isset($_SESSION["user"])){
     header("Location: ../login/pages-login.php");
     exit;
 }
+
 include("../mesin/config1.php"); 
+
+if( !isset($_GET['id']) ){
+	// kalau tidak ada id di query string
+	header('Location: inputsiswa.php');
+}
+
+//ambil id dari query string
+$id = $_GET['id'];
+
+// buat query untuk ambil data dari database
+$sql = "SELECT * FROM siswa WHERE id=$id";
+$query = mysqli_query($db, $sql);
+$siswa = mysqli_fetch_assoc($query);
+
+// jika data yang di-edit tidak ditemukan
+if( mysqli_num_rows($query) < 1 ){
+	die("data tidak ditemukan...");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
-        <title>Admin - Input Siswa</title>
+        <title>Admin - Edit Siswa</title>
         <?php require("../layout/headadmin.php");?>
     </head>
 
@@ -33,6 +53,7 @@ include("../mesin/config1.php");
             <div class="row">
               <div class="col-sm-12">
                 <div class="page-title-box">
+                
                   <h4 class="page-title">Data Siswa</h4>
                   <ol class="breadcrumb">
                     <div class="text-center">
@@ -57,6 +78,36 @@ include("../mesin/config1.php");
             <!-- end row -->
 
             <div class="page-content-wrapper">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card m-b-20">
+                    <div class="card-body">
+                      <h2 class="mt-0 header-title container text-center mb-5"> Form Edit Data Siswa</h2>
+                        <form action="../mesin/editsiswa.php" method="POST">
+                          <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
+                              <input type="text" class="form-control" 
+                              name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $siswa['nama'] ?>">
+                              <div id="emailHelp" class="form-text">Masukan Nama Siswa</div>
+			                        <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Kelas</label>
+                              <input type="text" 
+                              name="kelas" class="form-control" id="exampleInputPassword1" value="<?php echo $siswa['kelas'] ?>">
+                          </div>
+                        
+                          <input type="submit" value="Masukan" name="editsiswa" class="btn btn-primary"></input>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- end col -->
+              </div>
+              <!-- end row -->
+            </div>
+
+            <div>
               <div class="row">
                 <div class="col-12">
                   <div class="card m-b-20">
@@ -96,7 +147,7 @@ include("../mesin/config1.php");
                             <td><?php echo $siswa['nama']; ?></td>
                             <td><?php echo $siswa['kelas']; ?></td>
                             <td>
-                              <a class="btn btn-warning" href="editsiswa.php?id='<?php echo $siswa['id'];?>'">Edit</a>
+                              <a class="btn btn-warning" href="../mesin/editsiswa.php?id='<?php echo $siswa['id'];?>'">Edit</a>
                             </td>
                             <td>
                               <a class="btn btn-danger" href="../mesin/hapussiswa.php?id='<?php echo $siswa['id'];?>'">Hapus</a>
