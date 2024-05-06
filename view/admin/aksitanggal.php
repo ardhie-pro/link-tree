@@ -10,14 +10,14 @@ include("../mesin/config1.php");
 
 if( !isset($_GET['tanggal']) ){
 	// kalau tidak ada id di query string
-	header('Location: inputsiswa.php');
+	header('Location: tanggal.php');
 }
 
 //ambil id dari query string
-$id = $_GET['tanggal'];
+$tanggal = $_GET['tanggal'];
 
 // buat query untuk ambil data dari database
-$sql = "SELECT * FROM siswa WHERE id=$id";
+$sql = "SELECT * FROM tanggal WHERE tanggal=$tanggal";
 $query = mysqli_query($db, $sql);
 $siswa = mysqli_fetch_assoc($query);
 
@@ -87,15 +87,12 @@ if( mysqli_num_rows($query) < 1 ){
                           <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
                               <input type="text" class="form-control" 
-                              name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $siswa['nama'] ?>">
+                              name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $tanggal['tanggal'] ?>">
                               <div id="emailHelp" class="form-text">Masukan Nama Siswa</div>
-			                        <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
+			                      
                           </div>
-                          <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Kelas</label>
-                              <input type="text" 
-                              name="kelas" class="form-control" id="exampleInputPassword1" value="<?php echo $siswa['kelas'] ?>">
-                          </div>
+                         
+                             
                         
                           <input type="submit" value="Masukan" name="editsiswa" class="btn btn-primary"></input>
                       </form>
@@ -135,7 +132,7 @@ if( mysqli_num_rows($query) < 1 ){
                         <tbody>
                         <?php
                           $no = 1;
-                          $sql = "SELECT * FROM siswa";
+                          $sql = "SELECT * FROM tanggal";
                           $query = mysqli_query($db, $sql);
                           
                           while($siswa = mysqli_fetch_array($query)){
@@ -144,14 +141,8 @@ if( mysqli_num_rows($query) < 1 ){
                             <tr>
                             
                             <td><?php echo $no++; ?></td>
-                            <td><?php echo $siswa['nama']; ?></td>
-                            <td><?php echo $siswa['kelas']; ?></td>
-                            <td>
-                              <a class="btn btn-warning" href="../mesin/editsiswa.php?id='<?php echo $siswa['id'];?>'">Edit</a>
-                            </td>
-                            <td>
-                              <a class="btn btn-danger" href="../mesin/hapussiswa.php?id='<?php echo $siswa['id'];?>'">Hapus</a>
-                            </td>
+                            <td><?php echo $siswa['tanggal']; ?></td>
+
                             
                             </tr>
                             <?php }		
