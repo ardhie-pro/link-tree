@@ -1,6 +1,6 @@
-<footer class="footer">
-                    © 2018 Agroxa <span class="d-none d-sm-inline-block">- Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
-                </footer>
+            <footer class="footer">
+                <p class="text-muted">© 2024 Bes ICM. Crafted with <i class="mdi mdi-heart text-danger"></i> Ardhie | Fawwaz</p>
+            </footer>
 
             </div>
 

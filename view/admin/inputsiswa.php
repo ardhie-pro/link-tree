@@ -37,18 +37,18 @@ include("../mesin/config1.php");
                   <ol class="breadcrumb">
                     <div class="text-center">
                             <!-- Small modal -->
-                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center">Center modal</button>
+                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center"><i class="mdi mdi-plus"></i> Tambah Siswa</button>
                     </div>
                   </ol>
 
                   <div class="state-information d-none d-sm-block">
                     <div class="state-graph">
                       <div id="header-chart-1"></div>
-                      <div class="info">Balance $ 2,317</div>
+                      <div class="info">Kemandirian</div>
                     </div>
                     <div class="state-graph">
                       <div id="header-chart-2"></div>
-                      <div class="info">Item Sold 1230</div>
+                      <div class="info">Kerja Sama</div>
                     </div>
                   </div>
                 </div>
@@ -62,6 +62,7 @@ include("../mesin/config1.php");
                   <div class="card m-b-20">
                     <div class="card-body">
                       <h2 class="mt-0 header-title container text-center mb-5"> Tabel Data Siswa</h2>
+                      <div class="table-responsive order-table">
                       <table
                         id="datatable-buttons"
                         class="table table-striped table-bordered dt-responsive nowrap"
@@ -107,11 +108,12 @@ include("../mesin/config1.php");
                           ?>
                         </tbody>
                       </table>
+                      </div>
                       <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title mt-0">Center modal</h5>
+                                        <h5 class="modal-title mt-0">Tambah Siswa</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                     </div>
                                     <div class="modal-body">

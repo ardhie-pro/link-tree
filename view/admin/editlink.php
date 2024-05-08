@@ -10,16 +10,16 @@ include("../mesin/config1.php");
 
 if( !isset($_GET['id']) ){
 	// kalau tidak ada id di query string
-	header('Location: inputsiswa.php');
+	header('Location: inputlink.php');
 }
 
 //ambil id dari query string
 $id = $_GET['id'];
 
 // buat query untuk ambil data dari database
-$sql = "SELECT * FROM siswa WHERE id=$id";
+$sql = "SELECT * FROM link WHERE id=$id";
 $query = mysqli_query($db, $sql);
-$siswa = mysqli_fetch_assoc($query);
+$link = mysqli_fetch_assoc($query);
 
 // jika data yang di-edit tidak ditemukan
 if( mysqli_num_rows($query) < 1 ){
@@ -31,7 +31,7 @@ if( mysqli_num_rows($query) < 1 ){
 <html lang="en">
 
     <head>
-        <title>Admin - Edit Siswa</title>
+        <title>Admin - Edit link</title>
         <?php require("../layout/headadmin.php");?>
     </head>
 
@@ -54,11 +54,11 @@ if( mysqli_num_rows($query) < 1 ){
               <div class="col-sm-12">
                 <div class="page-title-box">
                 
-                  <h4 class="page-title">Data Siswa</h4>
+                  <h4 class="page-title">Data link</h4>
                   <ol class="breadcrumb">
                     <div class="text-center">
                             <!-- Small modal -->
-                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center"><i class="mdi mdi-plus"></i> Tambah Siswa</button>
+                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center"> <i class="mdi mdi-plus"></i> Tambah Link</button>
                     </div>
                   </ol>
 
@@ -82,22 +82,22 @@ if( mysqli_num_rows($query) < 1 ){
                 <div class="col-12">
                   <div class="card m-b-20">
                     <div class="card-body">
-                      <h2 class="mt-0 header-title container text-center mb-5"> Form Edit Data Siswa</h2>
-                        <form action="../mesin/editsiswa.php" method="POST">
+                      <h2 class="mt-0 header-title container text-center mb-5"> Form Edit Data link</h2>
+                        <form action="../mesin/editlink.php" method="POST">
                           <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
+                              <label for="exampleInputEmail1" class="form-label">judul link</label>
                               <input type="text" class="form-control" 
-                              name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $siswa['nama'] ?>">
-                              <div id="emailHelp" class="form-text">Masukan Nama Siswa</div>
-			                        <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
+                              name="judul" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $link['judul'] ?>">
+                              <div id="emailHelp" class="form-text">Masukan judul link</div>
+			                        <input type="hidden" name="id" value="<?php echo $link['id'] ?>" />
                           </div>
                           <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Kelas</label>
+                              <label for="exampleInputPassword1" class="form-label">link</label>
                               <input type="text" 
-                              name="kelas" class="form-control" id="exampleInputPassword1" value="<?php echo $siswa['kelas'] ?>">
+                              name="link" class="form-control" id="exampleInputPassword1" value="<?php echo $link['link'] ?>">
                           </div>
                         
-                          <input type="submit" value="Masukan" name="editsiswa" class="btn btn-primary"></input>
+                          <input type="submit" value="Masukan" name="editlink" class="btn btn-primary"></input>
                       </form>
                     </div>
                   </div>
@@ -112,7 +112,7 @@ if( mysqli_num_rows($query) < 1 ){
                 <div class="col-12">
                   <div class="card m-b-20">
                     <div class="card-body">
-                      <h2 class="mt-0 header-title container text-center mb-5"> Tabel Data Siswa</h2>
+                      <h2 class="mt-0 header-title container text-center mb-5"> Tabel Data link</h2>
                       <table
                         id="datatable-buttons"
                         class="table table-striped table-bordered dt-responsive nowrap"
@@ -125,8 +125,8 @@ if( mysqli_num_rows($query) < 1 ){
                         <thead>
                           <tr>
                             <th>no</th>
-                            <th>nama</th>
-                            <th>kelas</th>
+                            <th>judul</th>
+                            <th>link</th>
                             <th>button</th>
                             <th>#</th>
                           </tr>
@@ -135,22 +135,22 @@ if( mysqli_num_rows($query) < 1 ){
                         <tbody>
                         <?php
                           $no = 1;
-                          $sql = "SELECT * FROM siswa";
+                          $sql = "SELECT * FROM link";
                           $query = mysqli_query($db, $sql);
                           
-                          while($siswa = mysqli_fetch_array($query)){
+                          while($link = mysqli_fetch_array($query)){
                           ?>
 
                             <tr>
                             
                             <td><?php echo $no++; ?></td>
-                            <td><?php echo $siswa['nama']; ?></td>
-                            <td><?php echo $siswa['kelas']; ?></td>
+                            <td><?php echo $link['judul']; ?></td>
+                            <td><?php echo $link['link']; ?></td>
                             <td>
-                              <a class="btn btn-warning" href="../mesin/editsiswa.php?id='<?php echo $siswa['id'];?>'">Edit</a>
+                              <a class="btn btn-warning" href="../mesin/editlink.php?id='<?php echo $link['id'];?>'">Edit</a>
                             </td>
                             <td>
-                              <a class="btn btn-danger" href="../mesin/hapussiswa.php?id='<?php echo $siswa['id'];?>'">Hapus</a>
+                              <a class="btn btn-danger" href="../mesin/hapuslink.php?id='<?php echo $link['id'];?>'">Hapus</a>
                             </td>
                             
                             </tr>
@@ -162,24 +162,24 @@ if( mysqli_num_rows($query) < 1 ){
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title mt-0">Tambah Siswa</i></h5>
+                                        <h5 class="modal-title mt-0">Tambah Link</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="../mesin/inputsiswa.php" method="POST">
+                                        <form action="../mesin/inputlink.php" method="POST">
                                             <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
+                                                <label for="exampleInputEmail1" class="form-label">judul link</label>
                                                 <input type="text" class="form-control" 
-                                                name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                <div id="emailHelp" class="form-text">Masukan Nama Siswa</div>
+                                                name="judul" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <div id="emailHelp" class="form-text">Masukan judul link</div>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Kelas</label>
+                                                <label for="exampleInputPassword1" class="form-label">link</label>
                                                 <input type="text" 
-                                                name="kelas" class="form-control" id="exampleInputPassword1">
+                                                name="link" class="form-control" id="exampleInputPassword1">
                                             </div>
                                           
-                                            <input type="submit" value="Masukan" name="inputsiswa" class="btn btn-primary"></input>
+                                            <input type="submit" value="Masukan" name="inputlink" class="btn btn-primary"></input>
                                         </form>
                                     </div>
                                 </div><!-- /.modal-content -->

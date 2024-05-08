@@ -29,18 +29,18 @@
                   <ol class="breadcrumb">
                     <div class="text-center">
                             <!-- Small modal -->
-                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center">Center modal</button>
+                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center"><i class="mdi mdi-plus"></i> Tambah Tanggal</button>
                     </div>
                   </ol>
 
                   <div class="state-information d-none d-sm-block">
                     <div class="state-graph">
                       <div id="header-chart-1"></div>
-                      <div class="info">Balance $ 2,317</div>
+                      <div class="info">Kemandirian</div>
                     </div>
                     <div class="state-graph">
                       <div id="header-chart-2"></div>
-                      <div class="info">Item Sold 1230</div>
+                      <div class="info">Kerja Sama</div>
                     </div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@
                           <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                   <div class="modal-header">
-                                      <h5 class="modal-title mt-0">Center modal</h5>
+                                      <h5 class="modal-title mt-0">Tambah Tanggal</h5>
                                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                   </div>
                                   <div class="modal-body">
@@ -108,7 +108,7 @@
                                               name="tanggal" id="exampleInputEmail1" aria-describedby="emailHelp">
                                               <div id="emailHelp" class="form-text">Masukan Tannggal</div>
                                           </div>
-                                          <input type="submit" value="Masukan" name="inputsiswa" class="btn btn-primary"></input>
+                                          <input type="submit" value="Masukan" name="inputTanggal" class="btn btn-primary"></input>
                                       </form>
                                   </div>
                               </div><!-- /.modal-content -->

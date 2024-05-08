@@ -28,12 +28,12 @@
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <i class="mdi mdi-bell noti-icon"></i>
-                                <span class="badge badge-pill badge-info noti-icon-badge">3</span>
+                                <span class="badge badge-pill badge-info noti-icon-badge">5</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
                                 <!-- item-->
                                 <h6 class="dropdown-item-text">
-                                    Notifications (3)
+                                    Notifications (5)
                                 </h6>
                                 <div class="slimscroll notification-item-list">
                                     <!-- item-->
@@ -96,9 +96,10 @@
                                 </a>
                                 
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="inputsiswa.php">Form Siswa</a>
+                                    <a class="dropdown-item" href="inputtanggal.php">Form Tanggal</a>
+                                    <a class="dropdown-item" href="inputlink.php">Form Link</a>
+                                    <a class="dropdown-item" href="prestasi.php">Form Prestasi</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Separated link</a>
                                 </div>
@@ -121,7 +122,7 @@
                         <ul class="metismenu" id="side-menu">
                             <li class="menu-title">Main</li>
                             <li>
-                                <a href="index.html" class="waves-effect">
+                                <a href="dashboard.php" class="waves-effect">
                                     <i class="mdi mdi-home"></i><span class="badge badge-primary float-right">3</span> <span> Dashboard </span>
                                 </a>
                             </li>
@@ -131,7 +132,12 @@
                                 <ul class="submenu">
                                     <li><a href="inputsiswa.php">Form Siswa</a></li>
                                     <li><a href="inputtanggal.php">Form Tanggal</a></li>
+<<<<<<< HEAD
                                     <li><a href="tanggal.php">Form Absen</a></li>
+=======
+                                    <li><a href="inputlink.php">Form Link</a></li>
+                                    <li><a href="prestasi.php">Form Prestasi</a></li>
+>>>>>>> 7b5d8c61d4fe543b1827e59f2b1f5ffc95260500
                                 </ul>
                             </li>
 
