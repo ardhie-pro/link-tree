@@ -3946,7 +3946,7 @@ Invoice
 }
 
 .account-pages {
-  background: url("../images/bg.jpg");
+  background: url("../../assets/img/bgtr.png");
   position: absolute;
   background-size: cover;
   height: 100%;
