@@ -1,9 +1,17 @@
-<?php include("../mesin/config1.php"); ?>
+<?php 
+session_start();
+
+if( !isset($_SESSION["user"])){
+    header("Location: ../login/pages-login.php");
+    exit;
+}
+include("../mesin/config1.php"); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
-        <title>Admin - Input Tanggal</title>
+        <title>Admin - Kehadiran Siswa</title>
         <?php require("../layout/headadmin.php");?>
     </head>
 
@@ -53,14 +61,7 @@
                 <div class="col-12">
                   <div class="card m-b-20">
                     <div class="card-body">
-                      <h4 class="mt-0 header-title">Buttons example</h4>
-                      <p class="text-muted m-b-30">
-                        The Buttons extension for DataTables provides a common
-                        set of options, API methods and styling to display
-                        buttons on a page that will interact with a DataTable.
-                        The core library provides the based framework upon which
-                        plug-ins can built.
-                      </p>
+                      <h2 class="mt-0 header-title container text-center mb-5"> Tabel Data Siswa</h2>
                       <table
                         id="datatable-buttons"
                         class="table table-striped table-bordered dt-responsive nowrap"
@@ -72,59 +73,67 @@
                       >
                         <thead>
                           <tr>
-                            <th>No</th>
-                            <th>Tanggal</th>
-                            <th>Menu</th>
+                            <th>no</th>
+                            <th>nama</th>
+                            <th>kelas</th>
+                            <th>Terlambat</th>
+                            <th>Tidak Hadir</th>
                           </tr>
                         </thead>
-
+                        
                         <tbody>
-                          <tr>
-                          <?php
+                        <?php
                           $no = 1;
-                          $sql = "SELECT * FROM tanggal";
+                          $sql = "SELECT * FROM siswa";
                           $query = mysqli_query($db, $sql);
                           
-                          while($tanggal = mysqli_fetch_array($query)){
+                          while($siswa = mysqli_fetch_array($query)){
                           ?>
 
                             <tr>
                             
                             <td><?php echo $no++; ?></td>
-                            <td><?php echo $tanggal['tanggal']; ?></td>
+                            <td><?php echo $siswa['nama']; ?></td>
+                            <td><?php echo $siswa['kelas']; ?></td>
                             <td>
-                              <a class="btn btn-warning" href="aksitanggal.php?id='<?php echo $tanggal['id'];?>'">Absen</a>
+                              <a class="btn btn-success" href="telat.php?id='<?php echo $siswa['id'];?>'">Terlambat</a>
                             </td>
-                           
+                            <td>
+                            <a class="btn btn-danger" href="tidakhadir.php?id='<?php echo $siswa['id'];?>'">Tidak Hdir</a>
+                            </td>
                             
                             </tr>
                             <?php }		
-                     	
-                                 ?>
-                          </tr>
+                          ?>
                         </tbody>
                       </table>
                       <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title mt-0">Center modal</h5>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <form action="../mesin/inputtanggal.php" method="POST">
-                                                                        <div class="mb-3">
-                                                                            <label for="exampleInputEmail1" class="form-label">Masukan Tanggal</label>
-                                                                            <input type="text" class="form-control" 
-                                                                            name="tanggal" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                                            <div id="emailHelp" class="form-text">Masukan Tannggal</div>
-                                                                        </div>
-                                                                        <input type="submit" value="Masukan" name="inputsiswa" class="btn btn-primary"></input>
-                                                                    </form>
-                                                                </div>
-                                                            </div><!-- /.modal-content -->
-                                                        </div><!-- /.modal-dialog -->
-                                                    </div><!-- /.modal -->
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title mt-0">Center modal</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="../mesin/inputsiswa.php" method="POST">
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
+                                                <input type="text" class="form-control" 
+                                                name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <div id="emailHelp" class="form-text">Masukan Nama Siswa</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Kelas</label>
+                                                <input type="text" 
+                                                name="kelas" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                          
+                                            <input type="submit" value="Masukan" name="inputsiswa" class="btn btn-primary"></input>
+                                        </form>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
                     </div>
                   </div>
                 </div>

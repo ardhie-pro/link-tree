@@ -10,16 +10,16 @@ include("../mesin/config1.php");
 
 if( !isset($_GET['id']) ){
 	// kalau tidak ada id di query string
-	header('Location: tanggal.php');
+	header('Location: absensi.php');
 }
 
 //ambil id dari query string
 $id = $_GET['id'];
 
 // buat query untuk ambil data dari database
-$sql = "SELECT * FROM tanggal WHERE id=$id";
+$sql = "SELECT * FROM siswa WHERE id=$id";
 $query = mysqli_query($db, $sql);
-$tanggal = mysqli_fetch_assoc($query);
+$siswa = mysqli_fetch_assoc($query);
 
 // jika data yang di-edit tidak ditemukan
 if( mysqli_num_rows($query) < 1 ){
@@ -55,23 +55,8 @@ if( mysqli_num_rows($query) < 1 ){
                 <div class="page-title-box">
                 
                   <h4 class="page-title">Data Siswa</h4>
-                  <ol class="breadcrumb">
-                    <div class="text-center">
-                            <!-- Small modal -->
-                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center">Center modal</button>
-                    </div>
-                  </ol>
-
-                  <div class="state-information d-none d-sm-block">
-                    <div class="state-graph">
-                      <div id="header-chart-1"></div>
-                      <div class="info">Balance $ 2,317</div>
-                    </div>
-                    <div class="state-graph">
-                      <div id="header-chart-2"></div>
-                      <div class="info">Item Sold 1230</div>
-                    </div>
-                  </div>
+                  
+                  
                 </div>
               </div>
             </div>
@@ -82,13 +67,25 @@ if( mysqli_num_rows($query) < 1 ){
                 <div class="col-12">
                   <div class="card m-b-20">
                     <div class="card-body">
-                      <h1 class="mt-0 header-title container text-center mb-5">Anda Akan Memulai Absensi</h1>
-                        <form action="../mesin/aksitanggal.php" method="POST">
+                      <h1 class="mt-0 header-title container text-center mb-5">Ananda <?php echo $siswa['nama'] ?> Dinyatakan Terlambat</h1>
+                        <form action="../mesin/aksitelat.php" method="POST">
                           <div class="mb-3">
-                              <input type="hidden" class="form-control" 
-                              name="tanggal" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $tanggal['tanggal'] ?>">
+                              <input type="text" class="form-control" 
+                              name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $siswa['nama'] ?>">
                           </div>
-                          <input type="submit" value="Mulai" name="mulai" class="btn btn-danger text-center"></input>
+                          <div class="mb-3">
+                              <input type="text" class="form-control" 
+                              name="kelas" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $siswa['kelas'] ?>">
+                          </div>
+                          <div class="mb-3">
+                              <input type="text" class="form-control" 
+                              name="tanggal" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $siswa['tanggal'] ?>">
+                          </div>
+                          <div class="mb-3">
+                              <input type="text" class="form-control" 
+                              name="telat" id="exampleInputEmail1" aria-describedby="emailHelp" value="Terlambat">
+                          </div>
+                          <input type="submit" value="Lanjutkan" name="aksitelat" class="btn btn-danger text-center"></input>
                       </form>
                     </div>
                   </div>

@@ -131,6 +131,7 @@
                                 <ul class="submenu">
                                     <li><a href="inputsiswa.php">Form Siswa</a></li>
                                     <li><a href="inputtanggal.php">Form Tanggal</a></li>
+                                    <li><a href="tanggal.php">Form Absen</a></li>
                                 </ul>
                             </li>
 
