@@ -1,38 +1,10 @@
 <?php
+session_start();
 
-require_once("config.php");
-
-if(isset($_POST['register'])){
-
-    // filter data yang diinputkan
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-    // enkripsi password
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-
-
-    // menyiapkan query
-    $sql = "INSERT INTO users (name, username, email, password) 
-            VALUES (:name, :username, :email, :password)";
-    $stmt = $db->prepare($sql);
-
-    // bind parameter ke query
-    $params = array(
-        ":name" => $name,
-        ":username" => $username,
-        ":password" => $password,
-        ":email" => $email
-    );
-
-    // eksekusi query untuk menyimpan ke database
-    $saved = $stmt->execute($params);
-
-    // jika query simpan berhasil, maka user sudah terdaftar
-    // maka alihkan ke halaman login
-    if($saved) header("Location: login.php");
+if( !isset($_SESSION["user"])){
+    header("Location: ../login/pages-login.php");
+    exit;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,10 +13,10 @@ if(isset($_POST['register'])){
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-        <title>Agroxa - Responsive Bootstrap 4 Admin Dashboard</title>
+        <title>Kesiswaan - Registrasi Admin Dashboard</title>
         <meta content="Admin Dashboard" name="description" />
         <meta content="Themesbrand" name="author" />
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/img/incm.png">
 
         <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="../../assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
@@ -70,15 +42,10 @@ if(isset($_POST['register'])){
                         <h4 class="text-muted font-18 m-b-5 text-center">Free Register</h4>
                         <p class="text-muted text-center">Get your free Agroxa account now.</p>
 
-                        <form class="form-horizontal m-t-30" action="" method="POST">
+                        <form class="form-horizontal m-t-30" action="register.php" method="POST">
                             <div class="form-group">
                                 <label for="useremail">Nama</label>
-                                <input type="text" class="form-control" name="name" id="useremail" placeholder="Enter Your Name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="useremail">Email</label>
-                                <input type="email" class="form-control" id="useremail" name="email" placeholder="Enter email">
+                                <input type="text" class="form-control" name="nama" id="useremail" placeholder="Enter Your Name">
                             </div>
 
                             <div class="form-group">

@@ -63,7 +63,7 @@ if( isset($_SESSION["user"])){
         <!-- Begin page -->
         <div class="wrapper-page">
 
-            <div class="card">
+            <div class="card" style="opacity: 0.7;">
                 <div class="card-body">
 
                     <h3 class="text-center m-0">

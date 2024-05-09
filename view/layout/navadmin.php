@@ -132,17 +132,13 @@
                                 <ul class="submenu">
                                     <li><a href="inputsiswa.php">Form Siswa</a></li>
                                     <li><a href="inputtanggal.php">Form Tanggal</a></li>
-<<<<<<< HEAD
-                                    <li><a href="tanggal.php">Form Absen</a></li>
-=======
                                     <li><a href="inputlink.php">Form Link</a></li>
                                     <li><a href="prestasi.php">Form Prestasi</a></li>
->>>>>>> 7b5d8c61d4fe543b1827e59f2b1f5ffc95260500
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="calendar.html" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span> Calendar </span></a>
+                                <a href="tanggal.php" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span> Absen</span></a>
                             </li>
 
 
@@ -152,7 +148,7 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-google-pages"></i><span> Pages <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span> </span></a>
                                 <ul class="submenu">
                                     <li><a href="pages-login.html">Login</a></li>
-                                    <li><a href="pages-register.html">Register</a></li>
+                                    <li><a href="../login/pages-register.php">Register</a></li>
                                 </ul>
                             </li>
                         </ul>
