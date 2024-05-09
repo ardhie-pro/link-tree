@@ -17,7 +17,7 @@ if(isset($_POST['mulai'])){
 	// apakah query update berhasil?
 	if( $query ) {
 		// kalau berhasil alihkan ke halaman list-siswa.php
-		header('Location: ../admin/inputsiswa.php?status=sukses');
+		header('Location: ../admin/absensi.php?status=sukses');
 	} else {
 		// kalau gagal tampilkan pesan
 		die("Gagal menyimpan perubahan...");

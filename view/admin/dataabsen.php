@@ -11,7 +11,7 @@ include("../mesin/config1.php");
 <html lang="en">
 
     <head>
-        <title>Admin - Input Siswa</title>
+        <title>Admin - Kehadiran Siswa</title>
         <?php require("../layout/headadmin.php");?>
     </head>
 
@@ -37,31 +37,31 @@ include("../mesin/config1.php");
                   <ol class="breadcrumb">
                     <div class="text-center">
                             <!-- Small modal -->
-                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center"><i class="mdi mdi-plus"></i> Tambah Siswa</button>
+                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-center">Center modal</button>
                     </div>
                   </ol>
 
                   <div class="state-information d-none d-sm-block">
                     <div class="state-graph">
                       <div id="header-chart-1"></div>
-                      <div class="info">Kemandirian</div>
+                      <div class="info">Balance $ 2,317</div>
                     </div>
                     <div class="state-graph">
                       <div id="header-chart-2"></div>
-                      <div class="info">Kerja Sama</div>
+                      <div class="info">Item Sold 1230</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- end row -->
+
             <div class="page-content-wrapper">
               <div class="row">
                 <div class="col-12">
                   <div class="card m-b-20">
                     <div class="card-body">
                       <h2 class="mt-0 header-title container text-center mb-5"> Tabel Data Siswa</h2>
-                      <div class="table-responsive order-table">
                       <table
                         id="datatable-buttons"
                         class="table table-striped table-bordered dt-responsive nowrap"
@@ -74,32 +74,27 @@ include("../mesin/config1.php");
                         <thead>
                           <tr>
                             <th>no</th>
-                            <th>nama</th>
-                            <th>kelas</th>
-                            <th>button</th>
-                            <th>#</th>
+                            <th>Tanggal</th>
+                            <th>Terlambat</th>
+                            <th>Tidak Hadir</th>
                           </tr>
                         </thead>
                         
                         <tbody>
                         <?php
                           $no = 1;
-                          $sql = "SELECT * FROM siswa";
+                          $sql = "SELECT * FROM tanggal";
                           $query = mysqli_query($db, $sql);
-                          
-                          while($siswa = mysqli_fetch_array($query)){
+                          while($tanggal = mysqli_fetch_array($query)){
                           ?>
-
                             <tr>
-                            
                             <td><?php echo $no++; ?></td>
-                            <td><?php echo $siswa['nama']; ?></td>
-                            <td><?php echo $siswa['kelas']; ?></td>
+                            <td><?php echo $tanggal['tanggal']; ?></td>
                             <td>
-                              <a class="btn btn-warning" href="editsiswa.php?id='<?php echo $siswa['id'];?>'">Edit</a>
+                            <a class="btn btn-warning" href="datatelat.php?tanggal='<?php echo $tanggal['tanggal'];?>'">Telat</a>
                             </td>
                             <td>
-                              <a class="btn btn-danger" href="../mesin/hapussiswa.php?id='<?php echo $siswa['id'];?>'">Hapus</a>
+                            <a class="btn btn-danger" href="tidakhadirsiswa.php?tanggal='<?php echo $tanggal['tanggal'];?>'">Tidak Hdir</a>
                             </td>
                             
                             </tr>
@@ -107,35 +102,6 @@ include("../mesin/config1.php");
                           ?>
                         </tbody>
                       </table>
-                      </div>
-                      <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title mt-0">Tambah Siswa</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="../mesin/inputsiswa.php" method="POST">
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Nama Siswa</label>
-                                                <input type="text" class="form-control" 
-                                                name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                <div id="emailHelp" class="form-text">Masukan Nama Siswa</div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Kelas</label>
-                                                <input type="text" 
-                                                name="kelas" class="form-control" id="exampleInputPassword1">
-                                            </div>
-                                          
-                                            <input type="submit" value="Masukan" name="inputsiswa" class="btn btn-primary"></input>
-                                        </form>
-                                    </div>
-                                </div><!-- /.modal-content -->
-                            </div><!-- /.modal-dialog -->
-                        </div><!-- /.modal -->
-                    </div>
                   </div>
                 </div>
                 <!-- end col -->
@@ -146,6 +112,9 @@ include("../mesin/config1.php");
           </div>
           <!-- container-fluid -->
         </div>
+
                 <?php require("../layout/footeradmin.php");?>
+
     </body>
+
 </html>
