@@ -70,19 +70,19 @@ if( mysqli_num_rows($query) < 1 ){
                       <h1 class="mt-0 header-title container text-center mb-5">Ananda <?php echo $siswa['nama'] ?> Dinyatakan Terlambat</h1>
                         <form action="../mesin/aksitelat.php" method="POST">
                           <div class="mb-3">
-                              <input type="text" class="form-control" 
+                              <input type="hidden" class="form-control" 
                               name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $siswa['nama'] ?>">
                           </div>
                           <div class="mb-3">
-                              <input type="text" class="form-control" 
+                              <input type="hidden" class="form-control" 
                               name="kelas" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $siswa['kelas'] ?>">
                           </div>
                           <div class="mb-3">
-                              <input type="text" class="form-control" 
+                              <input type="hidden" class="form-control" 
                               name="tanggal" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $siswa['tanggal'] ?>">
                           </div>
                           <div class="mb-3">
-                              <input type="text" class="form-control" 
+                              <input type="hidden" class="form-control" 
                               name="telat" id="exampleInputEmail1" aria-describedby="emailHelp" value="Terlambat">
                           </div>
                           <input type="submit" value="Lanjutkan" name="aksitelat" class="btn btn-danger text-center"></input>

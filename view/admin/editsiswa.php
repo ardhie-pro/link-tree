@@ -96,7 +96,6 @@ if( mysqli_num_rows($query) < 1 ){
                               <input type="text" 
                               name="kelas" class="form-control" id="exampleInputPassword1" value="<?php echo $siswa['kelas'] ?>">
                           </div>
-                        
                           <input type="submit" value="Masukan" name="editsiswa" class="btn btn-primary"></input>
                       </form>
                     </div>
